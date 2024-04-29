@@ -17,17 +17,17 @@ skip = False
 
 for i in range(len(argv)):
     if skip == 0:
-        if argv[i] == "-h" | argv[i] == "--help":
+        if argv[i] == "-h" or argv[i] == "--help":
             help()
             exit(0)
-        elif argv[i] == "-o" | argv[i] == "--output":
+        elif argv[i] == "-o" or argv[i] == "--output":
             try:
                 output = argv[i+1]
                 skip = True
             except:
                 print("No output path given.")
                 exit(1)
-        elif argv[i] == "-f" | argv[i] == "--filename":
+        elif argv[i] == "-f" or argv[i] == "--filename":
             try:
                 path = argv[i+1]
                 skip = True
